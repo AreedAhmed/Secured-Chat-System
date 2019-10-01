@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Bruna Chat Box</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/mdb.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body style="background-color:#F5F5F5;">
+      <h1 align = "center" style=" padding: 12px 20px;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background-color:#008080;font-size: 40px;font-family:Arial Black;">Bruna Box</h1>
+      <form align = "center" name="entry" id="userentry">
+          <div>
+            Encryption: <input type="checkbox" id="encyptionOn">
+          </div>
+          <div class="flex-center flex-column">
+                <div class="md-form">
+                  <input type="text" id="usernames" name="text" class="form-control" required>
+                  <label for="usernames">Username</label>
+                </div>
+          </div>
+      </form>
+      <section class="two-pane" style = "display: none;" id = "msgdisplay">
+        <div class="chat-box-button" align = "center">
+            <div>
+                <section align = "left" id="message-list-container">
+                </section>
+            </div>
+            <div>
+                <form  style="position:relative;margin-top:0px;" name="chatForm" id="chat-form">
+                    <div class="md-form input-group mb-3">
+                    <input align = "left" style="width:600px;" type="text" class="form-control" placeholder="Type Message Here" id="chat-message-input" name="text" >
+                    </div>
+                    <div>
+                        <button type="submit">Send</button> 
+                    </div>
+                    <div>
+                       <input type="file" id="chat-file-input" name="file" style="size:60"> 
+                    </div>  
+                </form>
+            </div>   
+        </div>
+        <div class="user-online">
+            <p id = "user-container-list" ><b><u>User Online</u></b></p>
+        </div>
+      </section>          
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/js/encryption.js"></script>
+      <script src="/js/main.js"></script>
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="js/popper.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/mdb.js"></script>
+      <script type="text/javascript" src="js/aes.js"></script>
+      <script type="text/javascript" src="js/jsrsasign-all-min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/2.3.1/jsencrypt.js"></script>  
+  </body>
+</html>
